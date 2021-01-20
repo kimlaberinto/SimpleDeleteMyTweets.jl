@@ -16,6 +16,9 @@ else
         secrets["oauth_secret"])
 
     user_timeline_of_tweets = get_user_timeline(screen_name = "KimPLab", count=500)
-    tweet_id = user_timeline_of_tweets[1].id
-    #post_destroy_single_tweet_id(string(tweet_id))
+    for tweet in user_timeline_of_tweets
+        tweet_id = tweet.id
+        println(tweet_id)
+        #post_destroy_single_tweet_id(string(tweet_id))
+    end
 end
