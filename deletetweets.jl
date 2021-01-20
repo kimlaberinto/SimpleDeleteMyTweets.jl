@@ -15,7 +15,7 @@ else
         secrets["oauth_token"],
         secrets["oauth_secret"])
 
-    user_timeline_of_tweets = get_user_timeline(screen_name = "KimPLab", count=500)
+    user_timeline_of_tweets = get_user_timeline(screen_name = secrets["twitter_handle"], count=500)
     for tweet in user_timeline_of_tweets
         tweet_id = tweet.id
         println(tweet_id)
