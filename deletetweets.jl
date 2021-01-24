@@ -22,11 +22,10 @@ else
     response = readline()
     
     if (response == "Y")
-        println(@sprintf """ '%s' response detected. Tweets will now be deleted...""" response)
+        println(@sprintf """'%s' response detected. Tweets will now be deleted...""" response)
         for tweet in user_timeline_of_tweets
             tweet_id = tweet.id
-            println(tweet_id)
-            #post_destroy_single_tweet_id(string(tweet_id))
+            post_destroy_single_tweet_id(string(tweet_id))
         end
         println("The tweets have now been deleted. Exiting...")
     else
